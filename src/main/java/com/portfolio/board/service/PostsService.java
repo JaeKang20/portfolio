@@ -32,8 +32,6 @@ public class PostsService {
         return id;
     }
 
-
-
     @Transactional
     public void delete (Long id) {
         Posts posts = postsRepository.findById(id)
