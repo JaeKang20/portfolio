@@ -10,3 +10,4 @@
 4.Spring Security 로그인 구현(구글,네이버,카카오)
 
 5.AWS 연동
+EC2, RDS 서버배포.
