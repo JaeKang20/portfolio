@@ -3,6 +3,7 @@ import com.portfolio.board.domain.posts.Posts;
 import com.portfolio.board.domain.posts.PostsRepository;
 import com.portfolio.board.web.dto.PostsSaveRequestDto;
 import com.portfolio.board.web.dto.PostsUpdateRequestDto;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.junit.After;
