@@ -1,0 +1,52 @@
+./deploy.sh 명령어를 위한 콘솔 작업
+
+#!/bin/bash
+
+REPOSITORY=/home/ec2-user/app/step1
+PROJECT_NAME=portfolio
+echo "> Build 파일 복사"
+
+cd $REPOSITORY/$PROJECT_NAME/
+
+echo "> Git Pull"
+git pull
+
+echo "> 프로젝트 Build 시작"
+
+./gradlew build
+
+echo "> step1 디렉토리로 이동"
+
+cd $REPOSITORY
+
+echo "> Build 파일 복사"
+
+cp $REPOSITORY/$PROJECT_NAME/build/libs/*.jar $REPOSITORY/
+
+echo "> 현재 구동중인 애플리케이션 pid 확인"
+
+CURRENT_PID=$(pgrep -f ${PROJECT_NAME}.*.jar)
+
+echo  "현재 구동중인 어플리케이션 pid: $CURRENT_PID"
+
+if [ -z "$CURRENT_PID" ]; then
+    echo "> 현재 구동중인 애플리케이션이 없으므로 종료하지 않습니다."
+else
+    echo "> kill -15 $CURRENT_PID"
+    kill -15 $CURRENT_PID
+    sleep 5
+fi
+
+echo "> 새 어플리케이션 배포"
+
+JAR_NAME=$(ls -tr $REPOSITORY/| grep jar |tail -n 1)
+
+echo "> JAR Name: $JAR_NAME"
+
+nohup java -jar \
+        -Dspring.config.location=classpath:/application.properties,/home/ec2-user/app/application-oauth.properties,/home/ec2-user/app/application-real.properties \
+        -Dspring.profiles.active=real \
+    $REPOSITORY/$JAR_NAME  2>&1 &
+
+출처: 스프링 부트와 AWS로 혼자 구현하는 웹서비스.
+Line: 46줄에서 경로문제가 정말 중요함. 엔터도 마음대로 하면 안되고 한칸 띄고 \누르고 엔터 쳐야한다.
