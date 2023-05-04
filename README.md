@@ -1,9 +1,10 @@
-# portfolio
+# 최재강 portfolio & study
 게시판 
 
 1.테스트 코드 작성
+(테스트 코드가 먹통이면 aws ./gradelw test과정에서 먹통)
 
-2.Jpa 데이터 베이스 연동
+2.Jpa 데이터 베이스 연동 (h2로 연결->이후에 aws연결하는 과정에서 mysql로 변경)
 
 3.화면 구성하기(HTML,js,bootStrap)
 
