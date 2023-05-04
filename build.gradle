@@ -12,7 +12,7 @@
 		mavenCentral()
 		jcenter()
 	}
-	bootJar {
+	jar {
 		enabled = false
 	}
 
