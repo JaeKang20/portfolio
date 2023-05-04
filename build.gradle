@@ -13,11 +13,7 @@
 		jcenter()
 	}
 	jar {
-		manifest {
-			attributes(
-					'Main-Class': 'com.portfolio.board.BoardApplication'
-			)
-		}
+		enabled = false
 	}
 
 
