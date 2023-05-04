@@ -12,9 +12,14 @@
 		mavenCentral()
 		jcenter()
 	}
-	bootJar {
-		enabled = false
+	jar {
+		manifest {
+			attributes(
+					'Main-Class': 'com.portfolio.board.BoardApplication'
+			)
+		}
 	}
+
 
 	dependencies {
 		implementation 'org.springframework.boot:spring-boot-starter'
