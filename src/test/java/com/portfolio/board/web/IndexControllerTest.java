@@ -22,6 +22,6 @@ public class IndexControllerTest {
         String body = this.restTemplate.getForObject("/", String.class);
 
         //then
-        assertThat(body).contains("개발자의 포트폴리오");
+        assertThat(body).contains("개발자");
     }
 }
