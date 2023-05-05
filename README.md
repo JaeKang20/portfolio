@@ -13,12 +13,26 @@
 **시스템 구성**
 
 ```
-1.테스트 코드 작성
-2.DB Server: AWS RDS - MySQL
-3.WEB Server: AWS EC2
+1.DB Server: AWS RDS - MySQL
+2.WEB Server: AWS EC2
   -Spring boot: Spring MVC + Mustache
   -HTML, js, bootStrap
-4.Spring Security: Oauth2기능 구현, 구글,네이버
+3.Spring Security: Oauth2기능 구현, 구글,네이버
+```
+
+**적용 기술 및 라이브러리**
+
+```
+- JAVA 17
+- Spring Boot 2.6
+- Junit 4
+- DB: MySQL
+- Mushache
+- JS
+- BootStrap
+- AWS EC2
+- AWS RDS
+- OAuth2: google,naver
 ```
 
 [개발자 블로그 바로가기](https://keyboardwarrior.tistory.com/)
