@@ -1,11 +1,11 @@
 # 최재강 portfolio & study
 
-![게시판 이미지](https://user-images.githubusercontent.com/100588597/236480889-9df2abce-cb1d-495c-a2bd-fa5869321367.png){width=500px}
+![게시판 이미지](https://user-images.githubusercontent.com/100588597/236480889-9df2abce-cb1d-495c-a2bd-fa5869321367.png)
 
 **기획의도**
 
 ```
-- 최재강 개발자의 포트폴리오로 사용하기 위함입니다.
+- 최재강 개발자의 포트폴리오로 사용하기 위함입니다.
 - 공부한 내용을 깃허브와 블로그에 꾸준히 업로드 중입니다.
 - 게시판 활용
 ```
