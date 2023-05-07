@@ -64,7 +64,7 @@ public class OAuthAttributes { //사용자의 정보
                 .name(name)
                 .email(email)
                 .picture(picture)
-                .role(Role.GUEST)// 기본적으로 ROLE_GUEST로 설정
+                .role(Role.USER)//로그인한 유저는 USER권한 갖게함.
                 .build();
     }
 }
