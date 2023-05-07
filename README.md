@@ -34,5 +34,8 @@
 - AWS RDS
 - OAuth2: google,naver
 ```
+![Portfolio.pdf](https://github.com/JaeKang20/portfolio/files/11415266/Portfolio.pdf)
+
+
 
 [개발자 블로그 바로가기](https://keyboardwarrior.tistory.com/)
