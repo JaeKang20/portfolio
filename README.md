@@ -34,7 +34,11 @@
 - AWS RDS
 - OAuth2: google,naver
 ```
-![Portfolio.pdf](https://github.com/JaeKang20/portfolio/files/11415266/Portfolio.pdf)
+
+**ERD**
+
+[Portfolio.pdf](https://github.com/JaeKang20/portfolio/files/11415282/Portfolio.pdf)
+
 
 
 
