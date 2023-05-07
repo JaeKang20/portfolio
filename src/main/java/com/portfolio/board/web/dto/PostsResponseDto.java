@@ -16,5 +16,5 @@ public class PostsResponseDto {
         this.title = entity.getTitle();
         this.content = entity.getContent();
         this.author = entity.getAuthor();
-    }
+    }//단순 반환은 Builder없어도 된다.
 }

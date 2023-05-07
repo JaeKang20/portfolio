@@ -47,7 +47,7 @@ public class User extends BaseTimeEntity {
         this.picture = picture;
 
         return this;
-    }
+    }//이름이나 사진이 바뀔 가능성이 있음.
 
     public String getRoleKey() {
         return this.role.getKey();

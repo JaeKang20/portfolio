@@ -18,14 +18,17 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .headers().frameOptions().disable()
                 .and()
+                // 권한 설정
                 .authorizeRequests()
                 .antMatchers("/", "/css/**", "/images/**", "/js/**", "/h2-console/**", "/profile").permitAll()
                 .antMatchers("/api/v1/**","/api/v2/**").hasRole(Role.USER.name())
                 .anyRequest().authenticated()
                 .and()
+                // 로그아웃 설정
                 .logout()
                 .logoutSuccessUrl("/")
                 .and()
+                // OAuth2 로그인 설정
                 .oauth2Login()
                 .userInfoEndpoint()
                 .userService(customOAuth2UserService);

@@ -17,7 +17,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RestController
 public class PostsApiController {
-
+//REST API제공
     private final PostsService postsService;
 
     @PostMapping("/api/v1/posts")

@@ -20,8 +20,8 @@ public class IndexController {
         model.addAttribute("posts", postsService.findAllDesc());
         if (user != null) {
             model.addAttribute("userName", user.getName());
+            //로그인 성공하면 세션에 user 저장됩니다. 세션이 없으면 로그인 버튼이 보입니다.
         }
-        //로그인 성공하면 세션에 user 저장됩니다. 세션이 없으면 로그인 버튼이 보입니다.
         return "index";
     }
 
@@ -30,10 +30,11 @@ public class IndexController {
         return "posts-save";
     }
     @GetMapping("/posts/update/{id}")
-    public String postsUpdate(@PathVariable Long id, Model model) {
+    public String postsUpdate(@PathVariable Long id, Model model) {//url은 id값을 받음
+                    // Model은 컨트롤러에서 뷰로 넘길때 데이터를 담아서 전달
         PostsResponseDto dto = postsService.findById(id);
         model.addAttribute("post", dto);
-//업데이트할 수 도 있어 설정해줍니다.
+        //post이름으로 dto객체에 접근해서 데이터를 출력
         return "posts-update";
     }
 }
