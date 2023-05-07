@@ -17,7 +17,8 @@ import java.util.List;
 @RequiredArgsConstructor
 @RestController
 public class PostsApiController {
-//REST API제공
+//REST API제공 @Controller와 다르게 View를 반환하는 것이 아니라,
+// HTTP 응답 바디에 직접 데이터를 쓰는 방식으로 작동하며, API를 구현하는데 적합합니다.
     private final PostsService postsService;
 
     @PostMapping("/api/v1/posts")

@@ -35,6 +35,6 @@ public class IndexController {
         PostsResponseDto dto = postsService.findById(id);
         model.addAttribute("post", dto);
         //post이름으로 dto객체에 접근해서 데이터를 출력
-        return "posts-update";
+        return "posts-update"; //posts-update.mustache찾게됨.
     }
 }
