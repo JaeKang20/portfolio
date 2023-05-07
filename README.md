@@ -1,4 +1,5 @@
 # 최재강 portfolio & study
+AWS로 서버배포한 환경 바로 가보기 클릭: http://ec2-43-200-120-235.ap-northeast-2.compute.amazonaws.com:8080/
 
 ![게시판 이미지](https://user-images.githubusercontent.com/100588597/236480889-9df2abce-cb1d-495c-a2bd-fa5869321367.png)
 
@@ -37,7 +38,7 @@
 
 **ERD**
 
-[Portfolio.pdf](https://github.com/JaeKang20/portfolio/files/11415282/Portfolio.pdf)
+![erd](https://user-images.githubusercontent.com/100588597/236685379-4cc4657a-dff9-4a8e-a5ba-93f98a036ec9.png)
 
 
 
