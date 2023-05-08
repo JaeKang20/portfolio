@@ -21,8 +21,9 @@ public class PostsApiController {
 // HTTP 응답 바디에 직접 데이터를 쓰는 방식으로 작동하며, API를 구현하는데 적합합니다.
     private final PostsService postsService;
 
-    @PostMapping("/api/v1/posts")
+    @PostMapping("/api/v1/posts")//요청 헤더
     public Long save(@RequestBody PostsSaveRequestDto requestDto) {
+        //요청으로 받은 API를 본문에 dto로 매핑하여 받습니다.
         return postsService.save(requestDto);
     }
 
