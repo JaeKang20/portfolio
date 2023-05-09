@@ -28,10 +28,10 @@ public class IndexController {
     @GetMapping("/posts/save")
     public String postsSave() {
         return "posts-save";
-    }
+    }//posts-save.mustahce
     @GetMapping("/posts/update/{id}")
-    public String postsUpdate(@PathVariable Long id, Model model) {//url은 id값을 받음
-                    // Model은 컨트롤러에서 뷰로 넘길때 데이터를 담아서 전달
+    public String postsUpdate(@PathVariable Long id, Model model) {// id값을 받아, dto에 넣고 다시 view영역에
+     // Model에서 뷰로 넘길때 데이터를 담아서 전달
         PostsResponseDto dto = postsService.findById(id);
         model.addAttribute("post", dto);
         //post이름으로 dto객체에 접근해서 데이터를 출력

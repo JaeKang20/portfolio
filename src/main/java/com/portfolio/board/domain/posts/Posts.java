@@ -11,7 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-@Getter
+@Getter//Setter는 하면 안된다.
 @NoArgsConstructor
 @Entity
 public class Posts extends BaseTimeEntity {
@@ -28,7 +28,9 @@ public class Posts extends BaseTimeEntity {
     @Column(columnDefinition = "TEXT", nullable = false)
     private String content;
 
-    private String author;
+    private String author;//안써도 자동으로 필드 멤버는 컬럼이 되긴 함.
+
+    //@ManyToOne같은 어노테이션이 다른 테이블로 연결을 시켜주는 역할을 함.
 
     @Builder
     public Posts(String title, String content, String author) {
@@ -40,5 +42,5 @@ public class Posts extends BaseTimeEntity {
     public void update(String title, String content) {
         this.title = title;
         this.content = content;
-    }
+    }//수정할때 변경키 위함.
 }

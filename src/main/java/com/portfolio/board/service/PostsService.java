@@ -17,13 +17,13 @@ import java.util.stream.Collectors;
 @Service
 public class PostsService {//게시글과 관련된 비즈니스 로직
     private final PostsRepository postsRepository;
-//PostsRepository 클래스 주입받음.
+
 
     @Transactional
-    public Long save(PostsSaveRequestDto requestDto) {
+    public Long save(PostsSaveRequestDto requestDto) {//save서비스 로직
         return postsRepository.save(requestDto.toEntity()).getId();
     }
-    //requestDto를 Entity로 변환 후 DB에 저장하고, 저장된 Entity의 ID를 반환
+
     @Transactional
     public Long update(Long id, PostsUpdateRequestDto requestDto) {
         Posts posts = postsRepository.findById(id)
@@ -41,7 +41,7 @@ public class PostsService {//게시글과 관련된 비즈니스 로직
 
         postsRepository.delete(posts); // 해당 Entity의 데이터를 삭제한다.
     }
-    @Transactional(readOnly = true)
+    @Transactional(readOnly = true) //조회 기능만 남김
     public PostsResponseDto findById(Long id) {
         Posts postsEntity = postsRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("해당 사용자가 없습니다. id=" + id));
