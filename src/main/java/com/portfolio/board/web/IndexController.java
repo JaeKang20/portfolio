@@ -16,6 +16,9 @@ public class IndexController {
     private final PostsService postsService;
 
     @GetMapping("/")
+    //Spring MVC 템플릿 엔진 머스테치 활용하여 사용. veiw파일 mustache 있어야합니다.
+    //model에 내가 원하는 user.getName을 추가합니다.
+
     public String index(Model model, @LoginUser SessionUser user) {
         model.addAttribute("posts", postsService.findAllDesc());
         if (user != null) {
