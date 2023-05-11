@@ -8,7 +8,7 @@ import lombok.Getter;
 import java.util.Map;
 
 @Getter
-public class OAuthAttributes { //사용자의 정보
+public class OAuthAttributes { //사용자의 정보 전달해주는 dto
     private Map<String, Object> attributes;
     private String nameAttributeKey;
     private String name;

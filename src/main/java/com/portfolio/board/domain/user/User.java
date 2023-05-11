@@ -31,6 +31,7 @@ public class User extends BaseTimeEntity {
     private String picture;
 
     @Enumerated(EnumType.STRING)
+    //jpa로 데이터를 저장할때 ENUM값을 문자열로 저장될 수 있도록 선언
     @Column(nullable = false)
     private Role role;
 
