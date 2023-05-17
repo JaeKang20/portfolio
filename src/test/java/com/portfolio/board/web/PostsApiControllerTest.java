@@ -49,7 +49,7 @@ public class PostsApiControllerTest {
 
     private MockMvc mvc;
 
-    @Before
+    @Before//테스트가 시작되기 전에 해야하는 것.
     public void setup() {
         mvc = MockMvcBuilders
                 .webAppContextSetup(context)
