@@ -1,5 +1,5 @@
 # 최재강 portfolio & study
-🔥AWS로 서버배포한 환경 바로 가보기 클릭: http://ec2-43-200-120-235.ap-northeast-2.compute.amazonaws.com:8080/
+🔥AWS로 서버배포한 환경 바로 가보기 클릭: (베포하고 서버 내렸습니다.)
 
 ![Snipaste_2023-05-08_00-05-10](https://user-images.githubusercontent.com/100588597/236685649-93e95eb3-a116-416c-abc8-137ccca0e6fa.png)
 
